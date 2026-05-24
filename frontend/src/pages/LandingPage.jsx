@@ -4,6 +4,7 @@ import { Activity, ShieldAlert, Users, Award, MapPin, ArrowRight, HeartHandshake
 import LeafletMap from '../components/Widgets/LeafletMap';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
+import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
   const [awarenessPosts, setAwarenessPosts] = useState([]);
@@ -61,13 +62,13 @@ export default function LandingPage() {
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a
-            href="/register"
+          <Link
+            to="/register"
             className="flex items-center gap-2 rounded-xl bg-health-600 px-6 py-3 text-sm font-semibold text-white shadow-glow hover:bg-health-500 hover:scale-105 active:scale-95 transition-all"
           >
             Create Free Account
             <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
           <a
             href="#hospitals"
             className="flex items-center gap-2 rounded-xl bg-white border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-600 hover:bg-slate-50 dark:bg-slate-900 dark:border-slate-800 dark:text-slate-300 dark:hover:bg-slate-800 transition-all"

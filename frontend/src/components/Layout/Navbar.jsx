@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { Bell, Sun, Moon, LogOut, ShieldAlert, HeartPulse } from 'lucide-react';
 import { api } from '../../services/api';
+import { Link } from 'react-router-dom';
 
 export default function Navbar({ onToggleSidebar }) {
   const { user, logout } = useAuth();
@@ -139,12 +140,12 @@ export default function Navbar({ onToggleSidebar }) {
             </button>
           </div>
         ) : (
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="flex items-center gap-2 rounded-xl bg-health-600 px-4 py-2 text-sm font-semibold text-white hover:bg-health-500 shadow-glow transition-all"
           >
             Sign In
-          </a>
+          </Link>
         )}
       </div>
     </nav>
